@@ -1,18 +1,18 @@
 import React from "react";
-import "./Monitor.css";
+import "./Mouse.css";
 import { Link, NavLink } from "react-router-dom";
-import MonitorProducts from "../../../data/MonitorProducts";
 
 import Rating from "../Rating/Rating";
+import MouseProducts from "../../../data/MouseProducts";
 
-const Monitor = () => {
+const Mouse = () => {
   return (
     <div>
       <div className="shopContainer">
         <div className="shopSection">
           <div className="shopRow">
             <div className="itemContainer row ">
-              {MonitorProducts.map((product) => (
+              {MouseProducts.map((product) => (
                 <div className="items col-lg-3 offset-lg-1" key={product._id}>
                   <div className="item">
                     <Link to={`/products/${product._id}`}>
@@ -41,4 +41,4 @@ const Monitor = () => {
   );
 };
 
-export default Monitor;
+export default Mouse;

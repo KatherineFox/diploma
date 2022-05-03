@@ -1,18 +1,17 @@
 import React from "react";
-import "./Monitor.css";
-import { Link, NavLink } from "react-router-dom";
-import MonitorProducts from "../../../data/MonitorProducts";
-
+import "./Computer.css";
+import ComputerProducts from "../../../data/ComputerProducts";
+import { Link } from "react-router-dom";
 import Rating from "../Rating/Rating";
 
-const Monitor = () => {
+const Computer = () => {
   return (
     <div>
       <div className="shopContainer">
         <div className="shopSection">
           <div className="shopRow">
             <div className="itemContainer row ">
-              {MonitorProducts.map((product) => (
+              {ComputerProducts.map((product) => (
                 <div className="items col-lg-3 offset-lg-1" key={product._id}>
                   <div className="item">
                     <Link to={`/products/${product._id}`}>
@@ -40,5 +39,4 @@ const Monitor = () => {
     </div>
   );
 };
-
-export default Monitor;
+export default Computer;

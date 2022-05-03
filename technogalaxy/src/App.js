@@ -1,12 +1,27 @@
 import "./App.css";
 import Main from "./components/Main/Main";
-import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  NavLink,
+  Router,
+} from "react-router-dom";
 import logo from "./Logo.png";
 import Footer from "./components/Footer/Footer";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import Monitor from "./components/Categories/Monitor/Monitor";
 import Categories from "./components/Categories/Categories";
+import Cable from "./components/Categories/Cable/Cable";
+import Computer from "./components/Categories/Computer/Computer";
+import Laptop from "./components/Categories/Laptop/Laptop";
+import Monitor from "./components/Categories/Monitor/Monitor";
+import Tablet from "./components/Categories/Tablet/Tablet";
+import Keyboard from "./components/Categories/Keyboard/Keyboard";
+import Mouse from "./components/Categories/Mouse/Mouse";
+import Headphones from "./components/Categories/Headphones/Headphones";
+import ScrollToTop from "./components/ScrollToTop";
+import Login from "./components/Login/Login";
 
 function App(props) {
   return (
@@ -34,12 +49,26 @@ function App(props) {
             </li>
           </ul>
         </div>
-        <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path="/diploma" element={<Main />} />
-          <Route exact path="/categories/computers" element={<Monitor />} />
-          <Route exact path="categories" element={<Categories />} />
-        </Routes>
+        <ScrollToTop>
+          <Routes>
+            <Route path="/" element={<Main />} />
+            <Route path="/diploma" element={<Main />} />
+            <Route exact path="/categories/computers" element={<Computer />} />
+            <Route exact path="/categories/laptops" element={<Laptop />} />
+            <Route exact path="/categories/monitors" element={<Monitor />} />
+            <Route exact path="/categories/tablets" element={<Tablet />} />
+            <Route exact path="/categories/keyboards" element={<Keyboard />} />
+            <Route exact path="/categories/mouses" element={<Mouse />} />
+            <Route
+              exact
+              path="/categories/headphones"
+              element={<Headphones />}
+            />
+            <Route exact path="/categories/cables" element={<Cable />} />
+            <Route exact path="categories" element={<Categories />} />
+            <Route exact path="login" element={<Login />} />
+          </Routes>
+        </ScrollToTop>
 
         <div className="footer">
           <Footer />
