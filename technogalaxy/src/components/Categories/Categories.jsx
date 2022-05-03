@@ -94,7 +94,7 @@ const Categories = (props) => {
         </div>
       </div>
       <Routes>
-        <Route path="/categories/computers" element={<Monitor />} />
+        <Route exact path="/categories/computers" element={<Monitor />} />
       </Routes>
     </div>
   );

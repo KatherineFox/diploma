@@ -28,8 +28,8 @@ function App(props) {
               </NavLink>
             </li>
             <li>
-              <NavLink className="appLink" to="/diploma">
-                MAIN
+              <NavLink className="appLink" to="login">
+                LOGIN
               </NavLink>
             </li>
           </ul>
@@ -37,7 +37,7 @@ function App(props) {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/diploma" element={<Main />} />
-          <Route path="categories" element={<Categories />} />
+          <Route exact path="/categories" element={<Monitor />} />
         </Routes>
 
         <div className="footer">
