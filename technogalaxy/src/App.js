@@ -18,7 +18,7 @@ function App(props) {
               <img src={logo} alt="logo"></img>
             </li>
             <li>
-              <NavLink className="appLink" to="main">
+              <NavLink className="appLink" to="/diploma">
                 MAIN
               </NavLink>
             </li>
@@ -28,7 +28,7 @@ function App(props) {
               </NavLink>
             </li>
             <li>
-              <NavLink className="appLink" to="main">
+              <NavLink className="appLink" to="/diploma">
                 MAIN
               </NavLink>
             </li>
