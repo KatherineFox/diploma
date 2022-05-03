@@ -37,7 +37,8 @@ function App(props) {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/diploma" element={<Main />} />
-          <Route exact path="/categories" element={<Monitor />} />
+          <Route exact path="/categories/computers" element={<Monitor />} />
+          <Route exact path="categories" element={<Categories />} />
         </Routes>
 
         <div className="footer">
