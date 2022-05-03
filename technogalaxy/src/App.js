@@ -18,17 +18,17 @@ function App(props) {
               <img src={logo} alt="logo"></img>
             </li>
             <li>
-              <NavLink className="appLink" to="/main">
+              <NavLink className="appLink" to="main">
                 MAIN
               </NavLink>
             </li>
             <li>
-              <NavLink className="appLink" to="/categories">
+              <NavLink className="appLink" to="categories">
                 CATEGORIES
               </NavLink>
             </li>
             <li>
-              <NavLink className="appLink" to="/main">
+              <NavLink className="appLink" to="main">
                 MAIN
               </NavLink>
             </li>
@@ -37,8 +37,7 @@ function App(props) {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/diploma" element={<Main />} />
-          <Route path="/main" element={<Main />} />
-          <Route path="/categories" element={<Categories />} />
+          <Route path="categories" element={<Categories />} />
         </Routes>
 
         <div className="footer">
