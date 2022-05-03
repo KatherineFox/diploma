@@ -9,12 +9,12 @@ const Login = () => {
         <div className="formContent">
           <input className="formInput" type="email" placeholder="Email" />
           <input className="formInput" type="password" placeholder="Password" />
-          <button className="btn btn-primary" type="submit">
+          <button className="btn btn-primary loginButton" type="submit">
             Login
           </button>
-          <span>
-            <NavLink to={"/register"}>Create Account</NavLink>
-          </span>
+          <NavLink className="createAccountText" to={"/register"}>
+            Create Account
+          </NavLink>
         </div>
       </form>
     </>

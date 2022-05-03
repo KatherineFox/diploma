@@ -22,6 +22,7 @@ import Mouse from "./components/Categories/Mouse/Mouse";
 import Headphones from "./components/Categories/Headphones/Headphones";
 import ScrollToTop from "./components/ScrollToTop";
 import Login from "./components/Login/Login";
+import Profile from "./components/Profile/Profile";
 
 function App(props) {
   return (
@@ -43,9 +44,17 @@ function App(props) {
               </NavLink>
             </li>
             <li>
-              <NavLink className="appLink" to="login">
-                LOGIN
-              </NavLink>
+              <div className="dropdown">
+                <button className="dropButton">ACCOUNT</button>
+                <div className="dropContent">
+                  <NavLink className="appLink linkAccount" to="profile">
+                    PROFILE
+                  </NavLink>
+                  <NavLink className="appLink linkAccount" to="categories">
+                    LOGOUT
+                  </NavLink>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
@@ -67,6 +76,7 @@ function App(props) {
             <Route exact path="/categories/cables" element={<Cable />} />
             <Route exact path="categories" element={<Categories />} />
             <Route exact path="login" element={<Login />} />
+            <Route exact path="profile" element={<Profile />} />
           </Routes>
         </ScrollToTop>
 
