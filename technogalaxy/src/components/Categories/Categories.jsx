@@ -23,7 +23,7 @@ const Categories = (props) => {
               color="darkslateblue"
               size="8x"
             />
-            <NavLink className="itemLink" to="/computers">
+            <NavLink className="itemLink" to="computers">
               <div className="itemText">Computers</div>
             </NavLink>
           </div>
@@ -94,7 +94,7 @@ const Categories = (props) => {
         </div>
       </div>
       <Routes>
-        <Route path="/computers" element={<Monitor />} />
+        <Route path="computers" element={<Monitor />} />
       </Routes>
     </div>
   );
