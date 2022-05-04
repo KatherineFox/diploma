@@ -23,6 +23,8 @@ import Headphones from "./components/Categories/Headphones/Headphones";
 import ScrollToTop from "./components/ScrollToTop";
 import Login from "./components/Login/Login";
 import Profile from "./components/Profile/Profile";
+import Orders from "./components/Orders/Orders";
+import ProfileSettings from "./components/Profile/ProfileSettings/ProfileSettings";
 
 function App(props) {
   return (
@@ -31,7 +33,9 @@ function App(props) {
         <div className="nav">
           <ul className="navbar">
             <li>
-              <img src={logo} alt="logo"></img>
+              <NavLink to="/diploma">
+                <img src={logo} alt="logo"></img>
+              </NavLink>
             </li>
             <li>
               <NavLink className="appLink" to="/diploma">
@@ -45,10 +49,13 @@ function App(props) {
             </li>
             <li>
               <div className="dropdown">
-                <button className="dropButton">ACCOUNT</button>
+                <button className="dropButton">Hi, User</button>
                 <div className="dropContent">
-                  <NavLink className="appLink linkAccount" to="profile">
-                    PROFILE
+                  <NavLink className="appLink linkAccount" to="profilesettings">
+                    CHANGE PROFILE SETTINGS
+                  </NavLink>
+                  <NavLink className="appLink linkAccount" to="orders">
+                    CHECK MY ORDERS
                   </NavLink>
                   <NavLink className="appLink linkAccount" to="categories">
                     LOGOUT
@@ -77,6 +84,8 @@ function App(props) {
             <Route exact path="categories" element={<Categories />} />
             <Route exact path="login" element={<Login />} />
             <Route exact path="profile" element={<Profile />} />
+            <Route exact path="orders" element={<Orders />} />
+            <Route exact path="profilesettings" element={<ProfileSettings />} />
           </Routes>
         </ScrollToTop>
 
