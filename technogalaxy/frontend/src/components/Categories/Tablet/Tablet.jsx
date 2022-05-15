@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Tablet.css";
 import { Link, NavLink } from "react-router-dom";
-
 import Rating from "../Rating/Rating";
 import TabletProducts from "../../../data/TabletProducts";
+import axios from "axios";
 
 const Tablet = () => {
+  const [TabletProducts, setProducts] = useState([]);
+
+  useEffect(() => {
+    const fetchproducts = async () => {
+      const { data } = await axios.get("/api/tablet_products");
+      setProducts(data);
+    };
+    fetchproducts();
+  }, []);
   return (
     <div>
       <div className="shopContainer">

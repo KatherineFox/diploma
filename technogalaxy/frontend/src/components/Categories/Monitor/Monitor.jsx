@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Monitor.css";
 import { Link, NavLink } from "react-router-dom";
 import MonitorProducts from "../../../data/MonitorProducts";
-
 import Rating from "../Rating/Rating";
+import axios from "axios";
 
 const Monitor = () => {
+  const [MonitorProducts, setProducts] = useState([]);
+
+  useEffect(() => {
+    const fetchproducts = async () => {
+      const { data } = await axios.get("/api/monitor_products");
+      setProducts(data);
+    };
+    fetchproducts();
+  }, []);
+
   return (
     <div>
       <div className="shopContainer">

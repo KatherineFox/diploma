@@ -11,5 +11,4 @@ const MouseProducts = [
     numReviews: 4,
   },
 ];
-
 export default MouseProducts;

@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Keyboard.css";
 import { Link } from "react-router-dom";
 import Rating from "../Rating/Rating";
 import KeyboardProducts from "../../../data/KeyboardProducts";
+import axios from "axios";
 
 const Keyboard = () => {
+  const [KeyboardProducts, setProducts] = useState([]);
+
+  useEffect(() => {
+    const fetchproducts = async () => {
+      const { data } = await axios.get("/api/keyboard_products");
+      setProducts(data);
+    };
+    fetchproducts();
+  }, []);
+
   return (
     <div>
       <div className="shopContainer">

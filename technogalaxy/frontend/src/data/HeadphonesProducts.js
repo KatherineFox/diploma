@@ -11,5 +11,4 @@ const HeadphonesProducts = [
     numReviews: 1,
   },
 ];
-
 export default HeadphonesProducts;

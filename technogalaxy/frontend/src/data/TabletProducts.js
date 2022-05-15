@@ -11,5 +11,4 @@ const TabletProducts = [
     numReviews: 4,
   },
 ];
-
 export default TabletProducts;

@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Mouse.css";
 import { Link, NavLink } from "react-router-dom";
-
 import Rating from "../Rating/Rating";
 import MouseProducts from "../../../data/MouseProducts";
+import axios from "axios";
 
 const Mouse = () => {
+  const [MouseProducts, setProducts] = useState([]);
+
+  useEffect(() => {
+    const fetchproducts = async () => {
+      const { data } = await axios.get("/api/mouse_products");
+      setProducts(data);
+    };
+    fetchproducts();
+  }, []);
+
   return (
     <div>
       <div className="shopContainer">

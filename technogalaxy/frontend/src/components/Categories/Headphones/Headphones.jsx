@@ -3,8 +3,20 @@ import "./Headphones.css";
 import { Link } from "react-router-dom";
 import Rating from "../Rating/Rating";
 import HeadphonesProducts from "../../../data/HeadphonesProducts";
+import axios from "axios";
+import { useState, useEffect } from "react";
 
 const Headphones = () => {
+  const [HeadphonesProducts, setProducts] = useState([]);
+
+  useEffect(() => {
+    const fetchproducts = async () => {
+      const { data } = await axios.get("/api/headphones_products");
+      setProducts(data);
+    };
+    fetchproducts();
+  }, []);
+
   return (
     <div>
       <div className="shopContainer">

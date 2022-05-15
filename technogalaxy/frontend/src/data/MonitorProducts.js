@@ -11,5 +11,4 @@ const MonitorProducts = [
     numReviews: 4,
   },
 ];
-
 export default MonitorProducts;

@@ -11,5 +11,4 @@ const ComputerProducts = [
     numReviews: 4,
   },
 ];
-
 export default ComputerProducts;
